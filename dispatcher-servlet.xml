@@ -1,0 +1,19 @@
+dispatcher-servlet.xml
+
+ <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="index.htm">indexController</prop>
+                         <prop key="hello.htm">helloController</prop>
+            </props>
+        </property>
+    </bean>
+
+ <bean name="indexController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="index" />
+   
+<bean name="helloController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="hello" />
+</beans>
